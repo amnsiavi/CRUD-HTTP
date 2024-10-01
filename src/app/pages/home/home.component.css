@@ -1,0 +1,66 @@
+.header-container {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Add responsive properties */
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.table-container {
+  width: 100%;
+  padding: 20px 20px;
+  height: 100vh;
+  display: block;
+  margin-top: -100px;
+  /* Add responsive properties */
+  overflow: auto;
+}
+
+/* Add media queries for different screen sizes */
+
+/* For small screens (max-width: 576px) */
+@media (max-width: 576px) {
+  .header-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .table-container {
+    margin-top: -50px;
+    padding: 50px 50px;
+    max-width: 100%;
+  }
+}
+
+/* For medium screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .table-container {
+    margin-top: -75px;
+    padding: 30px 30px;
+  }
+}
+
+/* For large screens (max-width: 992px) */
+@media (max-width: 992px) {
+  .header-container {
+    flex-direction: row;
+    padding: 20px;
+  }
+  .table-container {
+    margin-top: -60px;
+    padding: 40px 40px;
+  }
+}
+
+/* For extra large screens (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .header-container {
+    flex-direction: row;
+    padding: 25px;
+  }
+}

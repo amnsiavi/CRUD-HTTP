@@ -1,0 +1,109 @@
+table {
+  border-collapse: collapse;
+  display: block;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  margin-top: 10vh;
+  width: 100%;
+  height: 70vh;
+  overflow: auto;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: transparent;
+}
+
+tr:hover {
+  background-color: transparent;
+}
+
+th:hover {
+  background-color: transparent;
+}
+
+@media screen and (min-width: 1000px) {
+  table {
+    font-size: 18px;
+    margin-top: 15vh;
+    color: white;
+  }
+  th,
+  td {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 999px) and (min-width: 768px) {
+  table {
+    font-size: 16px;
+    margin-top: 9vh;
+    text-align: center;
+  }
+  th,
+  td {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  table {
+    font-size: 14px;
+    margin-top: 9vh;
+    overflow-x: auto;
+  }
+  .visible {
+    display: none;
+  }
+}
+.actions {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.table-columns {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: #565957;
+}
+
+@media screen and (min-width: 768px) {
+  .table-columns {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .table-columns {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .table-columns {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .table-columns {
+    font-size: 12px;
+  }
+}
+.actions {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}

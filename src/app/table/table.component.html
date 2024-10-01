@@ -1,0 +1,44 @@
+@if(isFetching()){
+
+<app-loading-spinner />
+
+} @else { @if(sucess){
+<app-sucess-message />
+}
+<table>
+  <thead class="table-columns">
+    <tr>
+      <th>Post ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Comment</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(data of data(); track data.id){
+    <tr>
+      <td>{{ data.postId }}</td>
+      <td>{{ data.name }}</td>
+      <td>{{ data.email }}</td>
+      <td>{{ data.body }}</td>
+      <td>
+        <div class="actions">
+          <a title="Add Components" [routerLink]="'/add-comment/'"
+            ><app-add-comment-icon
+          /></a>
+          <app-delete-comment-icon
+            title="Delete Comment"
+            [userId]="data.id"
+            (delete)="deleteComment($event)"
+          />
+          <a [routerLink]="'/update-comment/' + data.id">
+            <app-update-icon title="Update Comments" />
+          </a>
+        </div>
+      </td>
+    </tr>
+    }
+  </tbody>
+</table>
+}
